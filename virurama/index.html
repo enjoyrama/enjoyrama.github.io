@@ -71,6 +71,55 @@
             max-width: 800px;
             margin: 10px auto 0;
         }
+        .news-list {
+            max-width: 800px;
+            margin: 10px auto 0;
+            list-style: none;
+            padding: 0;
+        }
+        .news-list li {
+            border-left: 3px solid #00ffaa;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            background: #111318;
+            border-radius: 0 6px 6px 0;
+        }
+        .news-date {
+            font-size: 0.82rem;
+            color: #888;
+            margin-bottom: 4px;
+        }
+        .gallery-wrapper {
+            overflow-x: auto;
+            max-width: 900px;
+            margin: 30px auto 0;
+            scrollbar-width: thin;
+            scrollbar-color: #00ffaa44 transparent;
+        }
+        .gallery-wrapper::-webkit-scrollbar {
+            height: 5px;
+        }
+        .gallery-wrapper::-webkit-scrollbar-thumb {
+            background: #00ffaa44;
+            border-radius: 4px;
+        }
+        .gallery-track {
+            display: flex;
+            gap: 10px;
+            width: max-content;
+        }
+        .gallery-track img {
+            height: 380px;
+            width: auto;
+            flex-shrink: 0;
+            border-radius: 6px;
+            display: block;
+            transition: box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .gallery-track img:hover {
+            box-shadow: 0 0 14px #00ffaa88;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +131,32 @@
         <a href="/">← Back to Enjoyrama</a>
     </div>
 </header>
+
+<div class="gallery-wrapper">
+    <div class="gallery-track">
+        <img src="images/viru1.jpg" alt="Virurama screenshot 1">
+        <img src="images/viru2.jpg" alt="Virurama screenshot 2">
+        <img src="images/viru3.jpg" alt="Virurama screenshot 3">
+        <img src="images/viru4.jpg" alt="Virurama screenshot 4">
+        <img src="images/viru5.jpg" alt="Virurama screenshot 5">
+        <img src="images/viru6.jpg" alt="Virurama screenshot 6">
+        <img src="images/viru7.jpg" alt="Virurama screenshot 7">
+        <img src="images/viru8.jpg" alt="Virurama screenshot 8">
+        <img src="images/viru9.jpg" alt="Virurama screenshot 9">
+        <img src="images/viru10.jpg" alt="Virurama screenshot 10">
+        <!-- duplicati per loop seamless -->
+        <img src="images/viru1.jpg" alt="">
+        <img src="images/viru2.jpg" alt="">
+        <img src="images/viru3.jpg" alt="">
+        <img src="images/viru4.jpg" alt="">
+        <img src="images/viru5.jpg" alt="">
+        <img src="images/viru6.jpg" alt="">
+        <img src="images/viru7.jpg" alt="">
+        <img src="images/viru8.jpg" alt="">
+        <img src="images/viru9.jpg" alt="">
+        <img src="images/viru10.jpg" alt="">
+    </div>
+</div>
 
 <div class="container">
 
@@ -105,6 +180,18 @@
         </p>
     </div>
 
+    <h2>Latest News</h2>
+    <ul class="news-list">
+        <li>
+            <div class="news-date">June 2, 2026</div>
+            <p style="margin:0;">Releasing date available: 19th June 2026.</p>
+        </li>
+        <li>
+            <div class="news-date">May 20, 2026</div>
+            <p style="margin:0;">we are on refining the last details of the game.</p>
+        </li>
+    </ul>
+
     <h2>Play Virurama</h2>
     <div class="links">
         <a href="https://store.steampowered.com/app/4565340/Virurama/" target="_blank">Steam Page</a>
@@ -124,6 +211,35 @@
 <footer>
     © 2026 Enjoyrama – Virurama
 </footer>
+
+<script>
+    const wrapper = document.querySelector('.gallery-wrapper');
+    const track   = document.querySelector('.gallery-track');
+    let paused = false;
+    const speed = 0.3; // pixel per frame: 0.3 = lento, 1 = normale, 2 = veloce
+    let accumulator = 0;
+
+    wrapper.addEventListener('mouseenter', () => paused = true);
+    wrapper.addEventListener('mouseleave', () => paused = false);
+
+    function step() {
+        if (!paused) {
+            accumulator += speed;
+            const move = Math.floor(accumulator);
+            if (move >= 1) {
+                wrapper.scrollLeft += move;
+                accumulator -= move;
+            }
+            if (wrapper.scrollLeft >= track.scrollWidth / 2) {
+                wrapper.scrollLeft = 0;
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    // Aspetta che le immagini siano caricate prima di partire
+    window.addEventListener('load', step);
+</script>
 
 </body>
 </html>
