@@ -209,6 +209,14 @@
             filter: grayscale(1);
             opacity: 0.3;
         }
+        nav.site-nav span.nav-disabled {
+            color: #333;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: not-allowed;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
@@ -216,11 +224,11 @@
 <nav class="site-nav">
     <a href="index.html" class="active">Home</a>
     <a href="instructions.html">Instructions</a>
-    <a href="characters.html">Characters</a>
-    <a href="rescue.html">Rescue</a>
-    <a href="bonuses.html">Bonuses &amp; Scores</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="trophies.html">Trophies</a>
+    <span class="nav-disabled">Characters</span>
+    <span class="nav-disabled">Rescue</span>
+    <span class="nav-disabled">Bonuses &amp; Scores</span>
+    <span class="nav-disabled">Statistics</span>
+    <span class="nav-disabled">Trophies</span>
 </nav>
 
 <header>
