@@ -189,6 +189,26 @@
             font-size: 2.2rem;
             line-height: 1;
         }
+        .card-grid span.card-disabled {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #0e1014;
+            border: 1px solid #1a1c22;
+            border-radius: 8px;
+            padding: 24px 16px;
+            color: #444;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: not-allowed;
+            user-select: none;
+        }
+        .card-grid span.card-disabled .card-icon {
+            filter: grayscale(1);
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
@@ -198,6 +218,7 @@
     <a href="instructions.html">Instructions</a>
     <a href="characters.html">Characters</a>
     <a href="rescue.html">Rescue</a>
+    <a href="bonuses.html">Bonuses &amp; Scores</a>
     <a href="statistics.html">Statistics</a>
     <a href="trophies.html">Trophies</a>
 </nav>
@@ -241,22 +262,26 @@
         <span class="card-icon">📖</span>
         Instructions
     </a>
-    <a href="characters.html">
+    <span class="card-disabled">
         <span class="card-icon">🧬</span>
         Characters
-    </a>
-    <a href="rescue.html">
+    </span>
+    <span class="card-disabled">
         <span class="card-icon">💊</span>
         Rescue
-    </a>
-    <a href="statistics.html">
+    </span>
+    <span class="card-disabled">
         <span class="card-icon">📊</span>
         Statistics
-    </a>
-    <a href="trophies.html">
+    </span>
+    <span class="card-disabled">
+        <span class="card-icon">⭐</span>
+        Bonuses &amp; Scores
+    </span>
+    <span class="card-disabled">
         <span class="card-icon">🏆</span>
         Trophies
-    </a>
+    </span>
 </div>
 
 <div class="container">
