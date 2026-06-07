@@ -120,9 +120,87 @@
         .gallery-track img:hover {
             box-shadow: 0 0 14px #00ffaa88;
         }
+
+        /* ── Navbar ── */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* ── Card grid ── */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 36px auto 0;
+            padding: 0 20px;
+        }
+        @media (max-width: 680px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 420px) {
+            .card-grid { grid-template-columns: 1fr; }
+        }
+        .card-grid a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #111318;
+            border: 1px solid #1e2128;
+            border-radius: 8px;
+            padding: 24px 16px;
+            text-decoration: none;
+            color: #e6e6e6;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+        }
+        .card-grid a:hover {
+            border-color: #00ffaa;
+            box-shadow: 0 0 14px #00ffaa33;
+            transform: translateY(-3px);
+            color: #00ffaa;
+        }
+        .card-grid .card-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
+
+<nav class="site-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="instructions.html">Instructions</a>
+    <a href="characters.html">Characters</a>
+    <a href="rescue.html">Rescue</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="trophies.html">Trophies</a>
+</nav>
 
 <header>
     <h1>Virurama</h1>
@@ -156,6 +234,29 @@
         <img src="images/viru9.jpg" alt="">
         <img src="images/viru10.jpg" alt="">
     </div>
+</div>
+
+<div class="card-grid">
+    <a href="instructions.html">
+        <span class="card-icon">📖</span>
+        Instructions
+    </a>
+    <a href="characters.html">
+        <span class="card-icon">🧬</span>
+        Characters
+    </a>
+    <a href="rescue.html">
+        <span class="card-icon">💊</span>
+        Rescue
+    </a>
+    <a href="statistics.html">
+        <span class="card-icon">📊</span>
+        Statistics
+    </a>
+    <a href="trophies.html">
+        <span class="card-icon">🏆</span>
+        Trophies
+    </a>
 </div>
 
 <div class="container">

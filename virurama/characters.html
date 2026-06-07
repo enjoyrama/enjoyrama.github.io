@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virurama – Characters</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2.2rem; color: #00ffaa; margin-bottom: 6px; }
+        h2 { color: #00ffaa; margin-top: 36px; }
+        p  { max-width: 800px; margin: auto; font-size: 1.05rem; }
+        header {
+            text-align: center;
+            padding: 44px 20px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        .back-link { text-align: center; margin-top: 10px; }
+        .back-link a { color: #aaaaaa; text-decoration: none; font-size: 0.9rem; }
+        .back-link a:hover { color: #00ffaa; }
+
+        /* Navbar */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* Character cards */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 24px auto 0;
+        }
+        .char-card {
+            background: #111318;
+            border: 1px solid #1e2128;
+            border-radius: 10px;
+            padding: 24px 20px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .char-card:hover {
+            border-color: #00ffaa;
+            box-shadow: 0 0 14px #00ffaa22;
+        }
+        .char-card .char-icon {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+        .char-card h3 {
+            color: #00ffaa;
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+        }
+        .char-card .char-type {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .type-ally  { background: #00ffaa22; color: #00ffaa; }
+        .type-enemy { background: #ff4a4a22; color: #ff6666; }
+        .char-card p {
+            margin: 0;
+            max-width: 100%;
+            font-size: 0.92rem;
+            color: #bbb;
+        }
+        .placeholder-notice {
+            background: #1a1a22;
+            border: 1px dashed #00ffaa44;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.92rem;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="instructions.html">Instructions</a>
+    <a href="characters.html" class="active">Characters</a>
+    <a href="rescue.html">Rescue</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="trophies.html">Trophies</a>
+</nav>
+
+<header>
+    <h1>Characters</h1>
+    <p>Meet the inhabitants of the micro‑world — allies and enemies alike.</p>
+    <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
+</header>
+
+<div class="container">
+
+    <h2>Allies</h2>
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon">🦠</div>
+            <h3>Antibody</h3>
+            <span class="char-type type-ally">Ally · Player</span>
+            <p>The protagonist. A mobile antibody that navigates the grid, deploys tools, and eliminates viruses.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon">🧱</div>
+            <h3>Bio‑Block</h3>
+            <span class="char-type type-ally">Ally · Tool</span>
+            <p>Solid biological matter you can place to obstruct virus movement or trigger chain reactions.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon">🛡️</div>
+            <h3>Barrier</h3>
+            <span class="char-type type-ally">Ally · Tool</span>
+            <p>A temporary wall that absorbs virus hits before breaking down.</p>
+        </div>
+    </div>
+
+    <h2>Enemies</h2>
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon">☣️</div>
+            <h3>Wanderer Virus</h3>
+            <span class="char-type type-enemy">Enemy · Basic</span>
+            <p>Moves randomly across the grid. Low threat alone, but dangerous in swarms.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon">⚡</div>
+            <h3>Chaser Virus</h3>
+            <span class="char-type type-enemy">Enemy · Aggressive</span>
+            <p>Actively pursues the antibody. Faster and more dangerous than the Wanderer.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon">💣</div>
+            <h3>Breaker Virus</h3>
+            <span class="char-type type-enemy">Enemy · Disruptor</span>
+            <p>Destroys Bio‑Blocks and Barriers on contact. Tears apart your defensive setup.</p>
+        </div>
+    </div>
+
+    <div class="placeholder-notice">
+        ✏️ More characters and variants will be revealed as the game approaches release.
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Enjoyrama – Virurama
+</footer>
+
+</body>
+</html>

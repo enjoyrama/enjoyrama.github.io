@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virurama – Rescue</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2.2rem; color: #00ffaa; margin-bottom: 6px; }
+        h2 { color: #00ffaa; margin-top: 36px; }
+        p  { max-width: 800px; margin: auto; font-size: 1.05rem; }
+        header {
+            text-align: center;
+            padding: 44px 20px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        .back-link { text-align: center; margin-top: 10px; }
+        .back-link a { color: #aaaaaa; text-decoration: none; font-size: 0.9rem; }
+        .back-link a:hover { color: #00ffaa; }
+
+        /* Navbar */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* Rescue cards */
+        .rescue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 24px auto 0;
+        }
+        .rescue-card {
+            background: #111318;
+            border: 1px solid #1e2128;
+            border-radius: 10px;
+            padding: 24px 20px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .rescue-card:hover {
+            border-color: #00ffaa;
+            box-shadow: 0 0 14px #00ffaa22;
+        }
+        .rescue-card .rescue-icon {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+        .rescue-card h3 {
+            color: #00ffaa;
+            margin: 0 0 6px;
+            font-size: 1.1rem;
+        }
+        .rescue-card .rescue-reward {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            background: #00ffaa22;
+            color: #00ffaa;
+        }
+        .rescue-card p {
+            margin: 0;
+            max-width: 100%;
+            font-size: 0.92rem;
+            color: #bbb;
+        }
+        .rescue-tip {
+            background: #111318;
+            border-left: 3px solid #00ffaa;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            max-width: 800px;
+            margin: 14px auto;
+            font-size: 0.95rem;
+        }
+        .placeholder-notice {
+            background: #1a1a22;
+            border: 1px dashed #00ffaa44;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.92rem;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="instructions.html">Instructions</a>
+    <a href="characters.html">Characters</a>
+    <a href="rescue.html" class="active">Rescue</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="trophies.html">Trophies</a>
+</nav>
+
+<header>
+    <h1>Rescue</h1>
+    <p>Protect the body's cells — don't let the viruses reach them.</p>
+    <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
+</header>
+
+<div class="container">
+
+    <h2>How Rescue Works</h2>
+    <p style="margin: 16px auto;">
+        Scattered across each stage are cells that must be kept alive. If a virus reaches one before you neutralise it, the cell is lost — reducing your score multiplier and potentially ending your run.
+    </p>
+
+    <h2>Cells to Protect</h2>
+    <div class="rescue-grid">
+        <div class="rescue-card">
+            <div class="rescue-icon">❤️</div>
+            <h3>Red Blood Cell</h3>
+            <span class="rescue-reward">+500 pts on rescue</span>
+            <p>The most common rescuable cell. Slow, vulnerable, and worth protecting at all costs.</p>
+        </div>
+        <div class="rescue-card">
+            <div class="rescue-icon">⚪</div>
+            <h3>White Blood Cell</h3>
+            <span class="rescue-reward">+800 pts on rescue</span>
+            <p>A fragile ally cell — if rescued it briefly slows nearby viruses.</p>
+        </div>
+        <div class="rescue-card">
+            <div class="rescue-icon">🔵</div>
+            <h3>Stem Cell</h3>
+            <span class="rescue-reward">+1500 pts + power‑up</span>
+            <p>Rare and valuable. Rescuing one awards a bonus power‑up for the next stage.</p>
+        </div>
+        <div class="rescue-card">
+            <div class="rescue-icon">💛</div>
+            <h3>Platelet</h3>
+            <span class="rescue-reward">Score multiplier ×2</span>
+            <p>Rescuing all Platelets on a stage doubles your final stage score.</p>
+        </div>
+    </div>
+
+    <h2>Tips</h2>
+    <div class="rescue-tip">
+        🛡️ Place Barriers between cells and incoming viruses at the start of each stage to buy yourself time.
+    </div>
+    <div class="rescue-tip">
+        🎯 Prioritise Stem Cells — their power‑up can make the next stage significantly easier.
+    </div>
+    <div class="rescue-tip">
+        ⚠️ Losing all rescuable cells on a stage triggers a score penalty and removes a multiplier stack.
+    </div>
+
+    <div class="placeholder-notice">
+        ✏️ Full rescue maps and stage-by-stage guides coming soon.
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Enjoyrama – Virurama
+</footer>
+
+</body>
+</html>

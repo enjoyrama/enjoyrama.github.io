@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virurama – Instructions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2.2rem; color: #00ffaa; margin-bottom: 6px; }
+        h2 { color: #00ffaa; margin-top: 32px; }
+        p  { max-width: 800px; margin: auto; font-size: 1.05rem; }
+        header {
+            text-align: center;
+            padding: 44px 20px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        .back-link { text-align: center; margin-top: 10px; }
+        .back-link a { color: #aaaaaa; text-decoration: none; font-size: 0.9rem; }
+        .back-link a:hover { color: #00ffaa; }
+
+        /* Navbar */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* Instruction blocks */
+        .instr-block {
+            background: #111318;
+            border-left: 3px solid #00ffaa;
+            border-radius: 0 8px 8px 0;
+            padding: 18px 22px;
+            margin: 16px auto;
+            max-width: 800px;
+        }
+        .instr-block h3 {
+            color: #00ffaa;
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+        }
+        .instr-block p {
+            margin: 0;
+            max-width: 100%;
+        }
+        .key-badge {
+            display: inline-block;
+            background: #1e2128;
+            border: 1px solid #00ffaa55;
+            border-radius: 4px;
+            padding: 1px 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #00ffaa;
+            margin: 0 2px;
+        }
+        .placeholder-notice {
+            background: #1a1a22;
+            border: 1px dashed #00ffaa44;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.92rem;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="instructions.html" class="active">Instructions</a>
+    <a href="characters.html">Characters</a>
+    <a href="rescue.html">Rescue</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="trophies.html">Trophies</a>
+</nav>
+
+<header>
+    <h1>Instructions</h1>
+    <p>Everything you need to know to survive inside the micro‑world.</p>
+    <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
+</header>
+
+<div class="container">
+
+    <h2>Objective</h2>
+    <div class="instr-block">
+        <h3>Goal</h3>
+        <p>Eliminate all viruses on the grid before they overrun the field. Survive all 16 procedural stages to unlock special reward characters. The game will then restart with a new character to save. Survive as much as possible and achieve the highest score possible to enjoy it on the Hi-score table online.</p>
+    </div>
+
+    <h2>Controls</h2>
+    <div class="instr-block">
+        <h3>Movement</h3>
+        <p>
+            Use joypad or
+            <span class="key-badge">W</span> <span class="key-badge">A</span> <span class="key-badge">S</span> <span class="key-badge">D</span>
+             (customizable keys) to move your antibody across the grid.
+        </p>
+    </div>
+    <div class="instr-block">
+        <h3>Actions</h3>
+        <p>
+            <span class="key-badge">Space</span> — Push / destroy a Bio‑Block. Push the barriers to activate them and stun viruses.<br>
+
+        </p>
+    </div>
+
+    <h2>Game Elements</h2>
+    <div class="instr-block">
+        <h3>Bio‑Blocks</h3>
+        <p>Solid obstacles you can push to throw them away. A block can crush viruses. If the block cannot move, it will be destroyed.</p>
+    </div>
+    <div class="instr-block">
+        <h3>Antibiotics</h3>
+        <p>Destroy viruses in a cross‑shaped area. Timing and positioning are critical.</p>
+    </div>
+    <div class="instr-block">
+        <h3>Barriers</h3>
+        <p>Temporary protective walls that block virus movement but degrade after repeated hits.</p>
+    </div>
+    <div class="instr-block">
+        <h3>DNA Bonuses</h3>
+        <p>Hidden collectibles scattered across stages. Collect them for score multipliers and special power‑ups.</p>
+    </div>
+
+    <div class="placeholder-notice">
+        ✏️ More detailed instructions, tips and advanced strategies coming soon.
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Enjoyrama – Virurama
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virurama – Statistics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2.2rem; color: #00ffaa; margin-bottom: 6px; }
+        h2 { color: #00ffaa; margin-top: 36px; }
+        p  { max-width: 800px; margin: auto; font-size: 1.05rem; }
+        header {
+            text-align: center;
+            padding: 44px 20px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        .back-link { text-align: center; margin-top: 10px; }
+        .back-link a { color: #aaaaaa; text-decoration: none; font-size: 0.9rem; }
+        .back-link a:hover { color: #00ffaa; }
+
+        /* Navbar */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* Stat cards */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 24px auto 0;
+        }
+        .stat-card {
+            background: #111318;
+            border: 1px solid #1e2128;
+            border-radius: 10px;
+            padding: 22px 18px;
+            text-align: center;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            border-color: #00ffaa;
+            box-shadow: 0 0 14px #00ffaa22;
+        }
+        .stat-card .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ffaa;
+            line-height: 1.1;
+        }
+        .stat-card .stat-label {
+            font-size: 0.82rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+
+        /* Leaderboard table */
+        .leaderboard {
+            max-width: 800px;
+            margin: 20px auto 0;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.95rem;
+        }
+        .leaderboard thead th {
+            background: #111318;
+            color: #00ffaa;
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: bold;
+            border-bottom: 2px solid #00ffaa33;
+        }
+        .leaderboard tbody tr {
+            border-bottom: 1px solid #1e2128;
+        }
+        .leaderboard tbody tr:hover {
+            background: #111318;
+        }
+        .leaderboard tbody td {
+            padding: 10px 14px;
+            color: #ccc;
+        }
+        .leaderboard tbody td.rank {
+            color: #00ffaa;
+            font-weight: bold;
+            width: 40px;
+        }
+        .placeholder-notice {
+            background: #1a1a22;
+            border: 1px dashed #00ffaa44;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.92rem;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="instructions.html">Instructions</a>
+    <a href="characters.html">Characters</a>
+    <a href="rescue.html">Rescue</a>
+    <a href="statistics.html" class="active">Statistics</a>
+    <a href="trophies.html">Trophies</a>
+</nav>
+
+<header>
+    <h1>Statistics</h1>
+    <p>Global records and the online high‑score leaderboard.</p>
+    <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
+</header>
+
+<div class="container">
+
+    <h2>Global Stats</h2>
+    <div class="stat-grid">
+        <div class="stat-card">
+            <div class="stat-icon">🎮</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Total Runs</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">☣️</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Viruses Destroyed</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">💊</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Antibiotics Used</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">❤️</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Cells Rescued</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏁</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Stages Cleared</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">All‑Time Best Score</div>
+        </div>
+    </div>
+
+    <h2>Online Leaderboard</h2>
+    <table class="leaderboard">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Stages</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="rank">1</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="rank">2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="rank">3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="rank">4</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="rank">5</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+    </table>
+
+    <div class="placeholder-notice">
+        📡 Live leaderboard data will be available after launch on 19th June 2026.
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Enjoyrama – Virurama
+</footer>
+
+</body>
+</html>

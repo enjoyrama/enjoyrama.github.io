@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virurama – Trophies</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d10;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+        h1 { font-size: 2.2rem; color: #00ffaa; margin-bottom: 6px; }
+        h2 { color: #00ffaa; margin-top: 36px; }
+        p  { max-width: 800px; margin: auto; font-size: 1.05rem; }
+        header {
+            text-align: center;
+            padding: 44px 20px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        .back-link { text-align: center; margin-top: 10px; }
+        .back-link a { color: #aaaaaa; text-decoration: none; font-size: 0.9rem; }
+        .back-link a:hover { color: #00ffaa; }
+
+        /* Navbar */
+        nav.site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0d0f13;
+            border-bottom: 1px solid #00ffaa22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 8px 16px;
+        }
+        nav.site-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.site-nav a:hover,
+        nav.site-nav a.active {
+            color: #00ffaa;
+            background: #00ffaa14;
+        }
+
+        /* Trophy grid */
+        .trophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 18px;
+            max-width: 900px;
+            margin: 24px auto 0;
+        }
+        .trophy-card {
+            background: #111318;
+            border: 1px solid #1e2128;
+            border-radius: 10px;
+            padding: 20px 18px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .trophy-card:hover {
+            border-color: #00ffaa;
+            box-shadow: 0 0 14px #00ffaa22;
+        }
+        .trophy-card.locked {
+            opacity: 0.45;
+            filter: grayscale(0.6);
+        }
+        .trophy-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .trophy-info h3 {
+            color: #00ffaa;
+            margin: 0 0 4px;
+            font-size: 1rem;
+        }
+        .trophy-info p {
+            margin: 0;
+            max-width: 100%;
+            font-size: 0.88rem;
+            color: #bbb;
+        }
+        .trophy-tier {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 1px 7px;
+            border-radius: 20px;
+            margin-bottom: 6px;
+        }
+        .tier-bronze { background: #8b4c1e33; color: #cd7f32; }
+        .tier-silver { background: #aaaaaa22; color: #c0c0c0; }
+        .tier-gold   { background: #ffd70033; color: #ffd700; }
+        .tier-plat   { background: #00cfff22; color: #00cfff; }
+
+        .progress-bar-wrap {
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 6px;
+        }
+        .progress-bar {
+            background: #1e2128;
+            border-radius: 6px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: #00ffaa;
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.8s ease;
+        }
+        .placeholder-notice {
+            background: #1a1a22;
+            border: 1px dashed #00ffaa44;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 0.92rem;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="instructions.html">Instructions</a>
+    <a href="characters.html">Characters</a>
+    <a href="rescue.html">Rescue</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="trophies.html" class="active">Trophies</a>
+</nav>
+
+<header>
+    <h1>Trophies</h1>
+    <p>Milestones, achievements, and proof of your mastery.</p>
+    <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
+</header>
+
+<div class="container">
+
+    <h2>Overall Progress</h2>
+    <div class="progress-bar-wrap">
+        <div class="progress-label">
+            <span>Trophies unlocked</span>
+            <span>0 / 12</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <h2>Bronze</h2>
+    <div class="trophy-grid">
+        <div class="trophy-card">
+            <div class="trophy-icon">🥉</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-bronze">Bronze</span>
+                <h3>First Blood</h3>
+                <p>Destroy your first virus.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥉</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-bronze">Bronze</span>
+                <h3>Field Medic</h3>
+                <p>Rescue 10 cells across any number of runs.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥉</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-bronze">Bronze</span>
+                <h3>Barrier Up</h3>
+                <p>Deploy 50 Barriers in total.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Silver</h2>
+    <div class="trophy-grid">
+        <div class="trophy-card">
+            <div class="trophy-icon">🥈</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-silver">Silver</span>
+                <h3>Halfway There</h3>
+                <p>Clear Stage 8 in a single run.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥈</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-silver">Silver</span>
+                <h3>Chain Reaction</h3>
+                <p>Trigger a Bio‑Block + Antibiotic combo that destroys 5+ viruses at once.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥈</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-silver">Silver</span>
+                <h3>Untouchable</h3>
+                <p>Complete a stage without losing a single cell.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Gold</h2>
+    <div class="trophy-grid">
+        <div class="trophy-card">
+            <div class="trophy-icon">🥇</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-gold">Gold</span>
+                <h3>Immune System</h3>
+                <p>Complete all 16 stages in a single run.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥇</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-gold">Gold</span>
+                <h3>DNA Hunter</h3>
+                <p>Collect every DNA bonus across all 16 stages in one run.</p>
+            </div>
+        </div>
+        <div class="trophy-card">
+            <div class="trophy-icon">🥇</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-gold">Gold</span>
+                <h3>No Cure Needed</h3>
+                <p>Finish a run without ever using an Antibiotic.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Platinum</h2>
+    <div class="trophy-grid">
+        <div class="trophy-card">
+            <div class="trophy-icon">💠</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-plat">Platinum</span>
+                <h3>Micro‑World Master</h3>
+                <p>Unlock all other trophies.</p>
+            </div>
+        </div>
+        <div class="trophy-card locked">
+            <div class="trophy-icon">🔒</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-plat">Platinum</span>
+                <h3>???</h3>
+                <p>Secret trophy. Keep playing to discover it.</p>
+            </div>
+        </div>
+        <div class="trophy-card locked">
+            <div class="trophy-icon">🔒</div>
+            <div class="trophy-info">
+                <span class="trophy-tier tier-plat">Platinum</span>
+                <h3>???</h3>
+                <p>Secret trophy. Keep playing to discover it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="placeholder-notice">
+        🔒 Trophy unlock tracking will be available after launch on 19th June 2026.
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Enjoyrama – Virurama
+</footer>
+
+</body>
+</html>
