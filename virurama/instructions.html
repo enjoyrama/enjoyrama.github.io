@@ -101,6 +101,14 @@
             max-width: 800px;
             margin: 30px auto 0;
         }
+        @keyframes bio-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.18); opacity: 0.75; }
+        }
+        .bio-block-icon {
+            animation: bio-pulse 2s ease-in-out infinite;
+            transform-origin: center;
+        }
     </style>
 </head>
 <body>
@@ -108,7 +116,7 @@
 <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="instructions.html" class="active">Instructions</a>
-    <a href="characters.html">Characters</a>
+    <a href="characters.html">Cast</a>
     <a href="rescue.html">Rescue</a>
     <a href="bonuses.html">Bonuses &amp; Scores</a>
     <a href="statistics.html">Statistics</a>
@@ -126,10 +134,18 @@
     <h2>Objective</h2>
     <div class="instr-block">
         <h3>Goal</h3>
-        <p>Eliminate all viruses on the grid before they overrun the field. Survive all 16 procedural stages to unlock special reward characters. The game will then restart with a new character to save. Survive as much as possible and achieve the highest score possible to enjoy it on the Hi-score table online.</p>
+        <p>Eliminate all viruses on the grid before they overrun the field.
+            Complete the whole healing trip of a random character through all 16 procedural stages to unlock special reward characters.
+            The difficulty increases with each stage, every two stages you will be ambiented in different human body affected part 
+            introducing new virus types and more aggressive behavior. The number of virus increases from 6 to 14 thorugh the trip. 
+            After completion of the healing trip the game will  restart with a new character to save.
+            Survive as much as possible and achieve the highest score possible
+            to enjoy it on the Hi-score table online. Your chance to get the best scores is by having three lives + only one extra life at 30.000 points.</p>
     </div>
 
-    <h2>Controls</h2>
+    <h2>Controls <img src="images/joystick.png" alt="Joystick" class="bio-block-icon" style="width:46px;height:46px;vertical-align:middle;margin-left:8px;image-rendering:pixelated;"></h2>
+    <p>The game is playable with both keyboard and joypad. Menus navigation and pause menu can also be controlled with the mouse.
+    </p>
     <div class="instr-block">
         <h3>Movement</h3>
         <p>
@@ -148,8 +164,8 @@
 
     <h2>Game Elements</h2>
     <div class="instr-block">
-        <h3>Bio‑Blocks</h3>
-        <p>Solid obstacles you can push to throw them away. A block can crush viruses. If the block cannot move, it will be destroyed. Do not destroy too many blocks that protect you from viruses. The viruses may destroy a lot of blocks and let you be vulnerable to their chase. The barriers generate blocks at a slow rate. </p>
+        <h3>Bio‑Blocks <img src="images/bio-block.png" alt="Bio-Block" class="bio-block-icon" style="width:32px;height:32px;vertical-align:middle;margin-left:8px;image-rendering:pixelated;"></h3>
+        <p>Solid obstacles but the main action is to push them to throw them away. The coolest thing is that blocks can crush viruses if throwed to them. If the block cannot move, it will crumble down. Advice: "Do not destroy too many blocks or you'll be vulnerable to viruses movement". The viruses may destroy randomly a lot of blocks in their wandering and let you be vulnerable to them. As little compensation the barriers generate blocks beside them randomly at a slow rate. </p>
     </div>
     <div class="instr-block">
         <h3>Antibiotics</h3>
@@ -157,11 +173,11 @@
     </div>
     <div class="instr-block">
         <h3>Barriers</h3>
-        <p>The barriers are the four sides of the stage. You can push them to stun viruses and release special enzima that slow down viruses. The barrier became unactive for 5 seconds before using them again</p>
+        <p>The barriers are the four sides of the stage. You can push them to stun viruses and release special enzima that slow down viruses. The barrier became unactive for 7 seconds before using them again</p>
     </div>
     <div class="instr-block">
         <h3>DNA Bonuses</h3>
-        <p>Hidden bonus hidden behaind one random Bio-Block. The DNA bonus appears only when the Bio-Block that contains it is destroyed. The effect of the DNA bonus is to calm down all chasing viruses.</p>
+        <p>Hidden bonus hidden behind one random Bio-Block. The DNA bonus appears only when the Bio-Block that contains it is destroyed. The effect of the DNA bonus is to calm down all viruses that are seeking you in that moment.</p>
     </div>
 
     <div class="placeholder-notice">

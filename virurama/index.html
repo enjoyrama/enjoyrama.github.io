@@ -209,13 +209,22 @@
             filter: grayscale(1);
             opacity: 0.3;
         }
+        .card-icon-gamecast {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/game-cast.png');
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
         nav.site-nav span.nav-disabled {
             color: #333;
             padding: 6px 14px;
             border-radius: 4px;
             font-size: 0.9rem;
             cursor: not-allowed;
-            user-select: none;
+            user-select: none;f
         }
     </style>
 </head>
@@ -224,7 +233,7 @@
 <nav class="site-nav">
     <a href="index.html" class="active">Home</a>
     <a href="instructions.html">Instructions</a>
-    <span class="nav-disabled">Characters</span>
+    <span class="nav-disabled">Cast</span>
     <span class="nav-disabled">Rescue</span>
     <span class="nav-disabled">Bonuses &amp; Scores</span>
     <span class="nav-disabled">Statistics</span>
@@ -271,12 +280,12 @@
         Instructions
     </a>
     <span class="card-disabled">
-        <span class="card-icon">🧬</span>
-        Characters
+        <span class="card-icon card-icon-gamecast"></span>
+        Game Cast
     </span>
     <span class="card-disabled">
         <span class="card-icon">💊</span>
-        Rescue
+        Characters to Heal
     </span>
     <span class="card-disabled">
         <span class="card-icon">📊</span>
