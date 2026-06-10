@@ -101,6 +101,23 @@
             max-width: 800px;
             margin: 30px auto 0;
         }
+        @keyframes walk-side {
+            from { background-position: 0 0; }
+            to   { background-position: -108px 0; }
+        }
+        .protagonista-side-icon {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-image: url('images/protagonista-side.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 108px auto;
+            image-rendering: pixelated;
+            vertical-align: middle;
+            margin-left: 8px;
+            animation: walk-side 0.5s steps(3) infinite;
+        }
         @keyframes bio-pulse {
             0%, 100% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.18); opacity: 0.75; }
@@ -108,6 +125,37 @@
         .bio-block-icon {
             animation: bio-pulse 2s ease-in-out infinite;
             transform-origin: center;
+        }
+        @keyframes swing {
+            0%   { transform: rotate(-30deg); }
+            50%  { transform: rotate(30deg); }
+            100% { transform: rotate(-30deg); }
+        }
+        .antibiotico-icon {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+            margin-left: 8px;
+            image-rendering: pixelated;
+            transform-origin: center;
+            animation: swing 1s ease-in-out infinite;
+        }
+        @keyframes gold-glow {
+            0%, 100% { text-shadow: 0 0 6px #ffaa00, 0 0 12px #ff6600; color: #ffd700; }
+            50%       { text-shadow: 0 0 18px #ffdd00, 0 0 32px #ff8800; color: #ffe84d; }
+        }
+        .big-bonus {
+            font-weight: bold;
+            animation: gold-glow 1.2s ease-in-out infinite;
+        }
+        @keyframes icon-glow {
+            0%, 100% { filter: drop-shadow(0 0 2px rgba(255,180,0,0.4)); }
+            50%       { filter: drop-shadow(0 0 8px rgba(255,180,0,0.95)); }
+        }
+        .glow-icons {
+            animation: icon-glow 1.2s ease-in-out infinite;
+            display: inline-block;
         }
     </style>
 </head>
@@ -147,7 +195,7 @@
     <p>The game is playable with both keyboard and joypad. Menus navigation and pause menu can also be controlled with the mouse.
     </p>
     <div class="instr-block">
-        <h3>Movement</h3>
+        <h3>Movement <span class="protagonista-side-icon"></span></h3>
         <p>
             Use joypad or
             <span class="key-badge">W</span> <span class="key-badge">A</span> <span class="key-badge">S</span> <span class="key-badge">D</span>
@@ -168,8 +216,17 @@
         <p>Solid obstacles but the main action is to push them to throw them away. The coolest thing is that blocks can crush viruses if throwed to them. If the block cannot move, it will crumble down. Advice: "Do not destroy too many blocks or you'll be vulnerable to viruses movement". The viruses may destroy randomly a lot of blocks in their wandering and let you be vulnerable to them. As little compensation the barriers generate blocks beside them randomly at a slow rate. </p>
     </div>
     <div class="instr-block">
-        <h3>Antibiotics</h3>
-        <p>The antibiotics move like Bio-Blocks, crushing viruses in their path, but the best feature is to align them horizontally or vertically to get the big bonus and stun all viruses in the stage.</p>
+        <h3>Antibiotics <img src="images/antibiotico.png" alt="Antibiotico" class="antibiotico-icon"></h3>
+        <p>The antibiotics move like Bio-Blocks, crushing viruses in their path, but the 
+            best feature is to align them <strong>horizontally</strong>
+            <span class="glow-icons">
+                <img src="images/antibiotico.png" alt="" class="bio-block-icon" style="width:20px;height:20px;vertical-align:middle;image-rendering:pixelated;">
+                <img src="images/antibiotico.png" alt="" class="bio-block-icon" style="width:20px;height:20px;vertical-align:middle;image-rendering:pixelated;">
+                <img src="images/antibiotico.png" alt="" class="bio-block-icon" style="width:20px;height:20px;vertical-align:middle;image-rendering:pixelated;">
+            </span> or
+            <strong>vertically</strong> to get the <span class="big-bonus">Big Bonus</span> 
+            (up to <strong>10.000</strong> points) and stun all viruses in the 
+            stage.</p>
     </div>
     <div class="instr-block">
         <h3>Barriers</h3>
