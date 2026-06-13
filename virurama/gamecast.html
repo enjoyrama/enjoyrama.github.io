@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virurama – Characters</title>
+    <title>Virurama – Cast</title>
     <style>
         body {
             margin: 0;
@@ -59,6 +59,11 @@
         nav.site-nav a.active {
             color: #00ffaa;
             background: #00ffaa14;
+        }
+        nav.site-nav a.disabled {
+            color: #444;
+            pointer-events: none;
+            cursor: default;
         }
 
         /* Character cards */
@@ -118,6 +123,17 @@
             max-width: 800px;
             margin: 30px auto 0;
         }
+        .char-icon-protagonista {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/protagonista.png');
+            background-position: 0 -64px;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -125,15 +141,15 @@
 <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="instructions.html">Instructions</a>
-    <a href="characters.html" class="active">Characters</a>
-    <a href="rescue.html">Rescue</a>
-    <a href="bonuses.html">Bonuses &amp; Scores</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="trophies.html">Trophies</a>
+    <a href="gamecast.html" class="active">Game Cast</a>
+    <a href="rescue.html" class="disabled">Rescue</a>
+    <a href="bonuses.html" class="disabled">Bonuses &amp; Scores</a>
+    <a href="statistics.html" class="disabled">Statistics</a>
+    <a href="trophies.html" class="disabled">Trophies</a>
 </nav>
 
 <header>
-    <h1>Characters</h1>
+    <h1>Game Cast</h1>
     <p>Meet the inhabitants of the micro‑world — allies and enemies alike.</p>
     <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
 </header>
@@ -143,20 +159,20 @@
     <h2>Allies</h2>
     <div class="char-grid">
         <div class="char-card">
-            <div class="char-icon">🦠</div>
+            <div class="char-icon"><div class="char-icon-protagonista"></div></div>
             <h3>Antibody</h3>
             <span class="char-type type-ally">Ally · Player</span>
             <p>The protagonist. A mobile antibody that navigates the grid, deploys tools, and eliminates viruses.</p>
         </div>
         <div class="char-card">
             <div class="char-icon">🧱</div>
-            <h3>Bio‑Block</h3>
+            <h3>Mitochondria</h3>
             <span class="char-type type-ally">Ally · Tool</span>
             <p>Solid biological matter you can place to obstruct virus movement or trigger chain reactions.</p>
         </div>
         <div class="char-card">
             <div class="char-icon">🛡️</div>
-            <h3>Barrier</h3>
+            <h3>Blood platelets</h3>
             <span class="char-type type-ally">Ally · Tool</span>
             <p>A temporary wall that absorbs virus hits before breaking down.</p>
         </div>
