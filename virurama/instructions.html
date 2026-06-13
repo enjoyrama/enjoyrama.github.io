@@ -60,10 +60,15 @@
             color: #00ffaa;
             background: #00ffaa14;
         }
+        nav.site-nav a.disabled {
+            color: #444;
+            pointer-events: none;
+            cursor: default;
+        }
 
         /* Instruction blocks */
         .instr-block {
-            background: #112318;
+            background: #111818;
             border-left: 3px solid #00ffaa;
             border-radius: 0 8px 8px 0;
             padding: 18px 22px;
@@ -126,6 +131,14 @@
             animation: bio-pulse 2s ease-in-out infinite;
             transform-origin: center;
         }
+        @keyframes barrier-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.75; }
+        }
+        .barrier-icon {
+            animation: barrier-pulse 2s ease-in-out infinite;
+            transform-origin: center;
+        }
         @keyframes swing {
             0%   { transform: rotate(-30deg); }
             50%  { transform: rotate(30deg); }
@@ -164,11 +177,11 @@
 <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="instructions.html" class="active">Instructions</a>
-    <a href="characters.html">Cast</a>
-    <a href="rescue.html">Rescue</a>
-    <a href="bonuses.html">Bonuses &amp; Scores</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="trophies.html">Trophies</a>
+    <a href="characters.html" class="disabled">Cast</a>
+    <a href="rescue.html" class="disabled">Rescue</a>
+    <a href="bonuses.html" class="disabled">Bonuses &amp; Scores</a>
+    <a href="statistics.html" class="disabled">Statistics</a>
+    <a href="trophies.html" class="disabled">Trophies</a>
 </nav>
 
 <header>
@@ -229,15 +242,17 @@
             stage.</p>
     </div>
     <div class="instr-block">
-        <h3>Barriers</h3>
+        <h3>Barriers <img src="images/border.png" alt="Border" class="barrier-icon" style="width:128px;height:32px;vertical-align:middle;margin-left:8px;image-rendering:pixelated;"></h3>
         <p>The barriers are the four sides of the stage. You can push them to stun viruses 
             and temporarily release <strong>special enzima</strong> that slows down viruses. 
             The stimulated barrier becomes unactive 
-            for 7 seconds before using it again</p>
+            for 7 seconds before using it again.</p>
     </div>
     <div class="instr-block">
-        <h3>DNA Bonuses</h3>
-        <p>Hidden bonus hidden behind one random Bio-Block. The DNA bonus appears only when the Bio-Block that contains it is destroyed. The effect of the DNA bonus is to calm down all viruses that are seeking you in that moment.</p>
+        <h3>DNA Bonuse <img src="images/DNA_Bonus.png" alt="DNA Bonus" class="bio-block-icon" style="width:48px;height:44px;vertical-align:middle;margin-left:8px;image-rendering:pixelated;"></h3>
+        <p>Hidden bonus behind one random Bio-Block for each stage. The DNA bonus appears only when 
+            the Bio-Block that contains it is destroyed. The effect of the DNA bonus is to calm down 
+            all viruses that are seeking you in that moment.</p>
     </div>
 
     <div class="placeholder-notice">
