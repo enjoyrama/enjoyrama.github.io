@@ -134,6 +134,28 @@
             image-rendering: pixelated;
             margin-bottom: 10px;
         }
+        .char-icon-herpes {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/herpes%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-papilloma {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/papilloma%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -156,14 +178,40 @@
 
 <div class="container">
 
-    <h2>Allies</h2>
+    <h2>Starring</h2>
     <div class="char-grid">
         <div class="char-card">
             <div class="char-icon"><div class="char-icon-protagonista"></div></div>
-            <h3>Antibody</h3>
-            <span class="char-type type-ally">Ally · Player</span>
-            <p>The protagonist. A mobile antibody that navigates the grid, deploys tools, and eliminates viruses.</p>
+            <h3>Antibody/Leucocyte</h3>
+            
+            <p>The protagonist. A lone antibody with the duty to eliminate viruses.</p>
         </div>
+    </div>
+
+    <h2>Viruses</h2>
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-herpes"></div></div>
+            <h3>Herpes Simplex</h3>
+            <span class="char-type type-enemy">Easy</span>
+            <p>You will find them in Mouth, Eyes and Brain scenarios.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-papilloma"></div></div>
+            <h3>Papilloma Virus</h3>
+            <span class="char-type type-enemy">Easy</span>
+            <p>You will find them in Mouth and Genitals scenarios.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon">💣</div>
+            <h3>Breaker Virus</h3>
+            <span class="char-type type-enemy">Enemy · Disruptor</span>
+            <p>Destroys Bio‑Blocks and Barriers on contact. Tears apart your defensive setup.</p>
+        </div>
+    </div>
+
+    <h2>Other Guests</h2>
+    <div class="char-grid">
         <div class="char-card">
             <div class="char-icon">🧱</div>
             <h3>Mitochondria</h3>
@@ -175,28 +223,6 @@
             <h3>Blood platelets</h3>
             <span class="char-type type-ally">Ally · Tool</span>
             <p>A temporary wall that absorbs virus hits before breaking down.</p>
-        </div>
-    </div>
-
-    <h2>Enemies</h2>
-    <div class="char-grid">
-        <div class="char-card">
-            <div class="char-icon">☣️</div>
-            <h3>Wanderer Virus</h3>
-            <span class="char-type type-enemy">Enemy · Basic</span>
-            <p>Moves randomly across the grid. Low threat alone, but dangerous in swarms.</p>
-        </div>
-        <div class="char-card">
-            <div class="char-icon">⚡</div>
-            <h3>Chaser Virus</h3>
-            <span class="char-type type-enemy">Enemy · Aggressive</span>
-            <p>Actively pursues the antibody. Faster and more dangerous than the Wanderer.</p>
-        </div>
-        <div class="char-card">
-            <div class="char-icon">💣</div>
-            <h3>Breaker Virus</h3>
-            <span class="char-type type-enemy">Enemy · Disruptor</span>
-            <p>Destroys Bio‑Blocks and Barriers on contact. Tears apart your defensive setup.</p>
         </div>
     </div>
 
