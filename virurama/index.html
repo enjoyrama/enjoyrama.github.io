@@ -218,6 +218,15 @@
             background-repeat: no-repeat;
             background-size: auto;
         }
+        .card-icon-john {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/John_Ill.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
         nav.site-nav span.nav-disabled {
             color: #333;
             padding: 6px 14px;
@@ -235,7 +244,7 @@
     <a href="index.html" class="active">Home</a>
     <a href="instructions.html">Instructions</a>
     <a href="gamecast.html">Game Cast</a>
-    <span class="nav-disabled">Characters to Heal</span>
+    <a href="characters_to_heal.html">Characters to Heal</a>
     <span class="nav-disabled">Bonuses &amp; Scores</span>
     <span class="nav-disabled">Statistics</span>
     <span class="nav-disabled">Trophies</span>
@@ -286,17 +295,19 @@
         Game Cast
     </a>
     <span class="card-disabled">
-        <span class="card-icon">💊</span>
-        Characters to Heal
+    <span class="card-icon">⭐</span>
+    Bonuses &amp; Scores
     </span>
+    <a href="characters_to_heal.html">
+        <span class="card-icon card-icon-john"></span>
+        Characters to Heal
+    </a>
+
     <span class="card-disabled">
         <span class="card-icon">📊</span>
         Statistics
     </span>
-    <span class="card-disabled">
-        <span class="card-icon">⭐</span>
-        Bonuses &amp; Scores
-    </span>
+
     <span class="card-disabled">
         <span class="card-icon">🏆</span>
         Trophies

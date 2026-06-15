@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virurama – Rescue</title>
+    <title>Virurama – Characters to Heal</title>
     <style>
         body {
             margin: 0;
@@ -59,6 +59,11 @@
         nav.site-nav a.active {
             color: #00ffaa;
             background: #00ffaa14;
+        }
+        nav.site-nav a.disabled {
+            color: #444;
+            pointer-events: none;
+            cursor: default;
         }
 
         /* Rescue cards */
@@ -127,6 +132,16 @@
             max-width: 800px;
             margin: 30px auto 0;
         }
+        .rescue-icon-john {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/John_Ill.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -134,68 +149,60 @@
 <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="instructions.html">Instructions</a>
-    <a href="characters.html">Characters</a>
-    <a href="rescue.html" class="active">Rescue</a>
-    <a href="bonuses.html">Bonuses &amp; Scores</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="trophies.html">Trophies</a>
+    <a href="gamecast.html">Game Cast</a>
+    <a href="characters_to_heal.html" class="active">Characters to Heal</a>
+    <a href="bonuses.html" class="disabled">Bonuses &amp; Scores</a>
+    <a href="statistics.html" class="disabled">Statistics</a>
+    <a href="trophies.html" class="disabled">Trophies</a>
 </nav>
 
 <header>
-    <h1>Rescue</h1>
-    <p>Protect the body's cells — don't let the viruses reach them.</p>
+    <h1>Characters to Heal</h1>
+    <p>During the hard 16 stages trip, you are inside the human body of a particular character
+        that you can collect in your trophy gallery inside the game.</p>
     <div class="back-link"><a href="index.html">← Back to Virurama</a></div>
 </header>
 
 <div class="container">
 
-    <h2>How Rescue Works</h2>
+    <h2>Unlock Charactersfor each human body trip completion</h2>
     <p style="margin: 16px auto;">
-        Scattered across each stage are cells that must be kept alive. If a virus reaches one before you neutralise it, the cell is lost — reducing your score multiplier and potentially ending your run.
+        Characters have only the meaning of a trophy and are artwork/social 
+        representative. Each month new characters will be added by the development 
+        team. When you win a character, 
+        the next trip will be set with a random available character to heal. Please look at the 
+        online Trophies Leaderboard to see your rank on Virurama's best player list.
     </p>
 
-    <h2>Cells to Protect</h2>
+    <h2>Characters to Heal History</h2>
     <div class="rescue-grid">
         <div class="rescue-card">
-            <div class="rescue-icon">❤️</div>
-            <h3>Red Blood Cell</h3>
-            <span class="rescue-reward">+500 pts on rescue</span>
+            <div class="rescue-icon"><div class="rescue-icon-john"></div></div>
+            <h3>John</h3>
+            <span class="rescue-reward">June 2026</span>
             <p>The most common rescuable cell. Slow, vulnerable, and worth protecting at all costs.</p>
         </div>
         <div class="rescue-card">
-            <div class="rescue-icon">⚪</div>
-            <h3>White Blood Cell</h3>
-            <span class="rescue-reward">+800 pts on rescue</span>
-            <p>A fragile ally cell — if rescued it briefly slows nearby viruses.</p>
+            <div class="rescue-icon">?</div>
+            <h3>Hidden</h3>
+            <span class="rescue-reward">July 2026</span>
+            <p>to be published.</p>
         </div>
         <div class="rescue-card">
-            <div class="rescue-icon">🔵</div>
-            <h3>Stem Cell</h3>
-            <span class="rescue-reward">+1500 pts + power‑up</span>
-            <p>Rare and valuable. Rescuing one awards a bonus power‑up for the next stage.</p>
+            <div class="rescue-icon">?</div>
+            <h3>Hidden</h3>
+            <span class="rescue-reward">August 2026</span>
+            <p>to be published..</p>
         </div>
         <div class="rescue-card">
-            <div class="rescue-icon">💛</div>
-            <h3>Platelet</h3>
-            <span class="rescue-reward">Score multiplier ×2</span>
-            <p>Rescuing all Platelets on a stage doubles your final stage score.</p>
+            <div class="rescue-icon">?</div>
+            <h3>Hidden</h3>
+            <span class="rescue-reward">September 2026</span>
+            <p>to be published.</p>
         </div>
     </div>
 
-    <h2>Tips</h2>
-    <div class="rescue-tip">
-        🛡️ Place Barriers between cells and incoming viruses at the start of each stage to buy yourself time.
-    </div>
-    <div class="rescue-tip">
-        🎯 Prioritise Stem Cells — their power‑up can make the next stage significantly easier.
-    </div>
-    <div class="rescue-tip">
-        ⚠️ Losing all rescuable cells on a stage triggers a score penalty and removes a multiplier stack.
-    </div>
 
-    <div class="placeholder-notice">
-        ✏️ Full rescue maps and stage-by-stage guides coming soon.
-    </div>
 
 </div>
 
