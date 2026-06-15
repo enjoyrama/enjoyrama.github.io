@@ -167,6 +167,157 @@
             image-rendering: pixelated;
             margin-bottom: 10px;
         }
+        .char-icon-influenza {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/influenza%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-coronavirus {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/coronavirus%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-rotavirus {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/rotavirus%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-astrovirus {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/astrovirus%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-hepatitis {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/hepatitis%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-citomegalovirus {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/citomegalo%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-hiv {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/hiv%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-coxsackie {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/coxsackie%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-poliovirus {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/poliovirus%20front.png');
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        .char-icon-mitochondria {
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+        }
+        .mito-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 64px;
+            height: 64px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            image-rendering: pixelated;
+        }
+        .mito-ovale {
+            background-image: url('images/ovale.png');
+            width: 64px;          /* dimensione del layer */
+            height: 64px;
+            top: 0px;             /* offset verticale rispetto al contenitore */
+            left: 0px;            /* offset orizzontale */
+            background-size: 70%; /* scala dell'immagine dentro il layer */
+        }
+        .mito-criste {
+            background-image: url('images/criste.png');
+            width: 48px;
+            height: 48px;
+            top: 8px;
+            left: 8px;
+            background-size: 80%;
+        }
+        .mito-faccina {
+            background-image: url('images/faccina_felice.png');
+            width: 40px;
+            height: 30px;
+            top: 10%;
+            left: 15px;
+            background-size: 90%;
+        }
+        .char-icon-piastrina {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            background-image: url('images/piastrina.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -199,41 +350,106 @@
         </div>
     </div>
 
-    <h2>Viruses</h2>
+    <h2>Antagonists</h2>
     <div class="char-grid">
         <div class="char-card">
             <div class="char-icon"><div class="char-icon-herpes"></div></div>
             <h3>Herpes Simplex</h3>
             <span class="char-type type-enemy">Easy</span>
-            <p>You will find them in Mouth, Eyes and Brain scenarios.</p>
+            <p>You will find it in Mouth, Eyes and Brain scenarios.</p>
         </div>
         <div class="char-card">
             <div class="char-icon"><div class="char-icon-papilloma"></div></div>
             <h3>Papilloma Virus</h3>
             <span class="char-type type-enemy">Easy</span>
-            <p>You will find them in Mouth and Genitals scenarios.</p>
+            <p>You will find it in Mouth and Genitals scenarios.</p>
         </div>
         <div class="char-card">
             <div class="char-icon"><div class="char-icon-adenovirus"></div></div>
             <h3>AdenoVirus</h3>
             <span class="char-type type-enemy">Easy</span>
-            <p>You will find them only in Eyes scenarios.</p>
+            <p>You will find it only in Eyes scenario.</p>
+        </div>
+    </div>
+    
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-influenza"></div></div>
+            <h3>Influenza</h3>
+            <span class="char-type type-enemy">Medium</span>
+            <p>You will find it  only in Lungs scenario.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-coronavirus"></div></div>
+            <h3>Corona Virus</h3>
+            <span class="char-type type-enemy">Medium</span>
+            <p>You will find it  only in Lungs scenario.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-rotavirus"></div></div>
+            <h3>Rotavirus</h3>
+            <span class="char-type type-enemy">Medium</span>
+            <p>You will find it only in Stomach scenario.</p>
         </div>
     </div>
 
-    <h2>Other Guests</h2>
     <div class="char-grid">
         <div class="char-card">
-            <div class="char-icon">🧱</div>
-            <h3>Mitochondria</h3>
-            <span class="char-type type-ally">Ally · Tool</span>
-            <p></p>You will find them only in Eyes scenarios.</p>
+            <div class="char-icon"><div class="char-icon-astrovirus"></div></div>
+            <h3>AstroVirus</h3>
+            <span class="char-type type-enemy">Medium</span>
+            <p>You will find it  only in Stomach scenario.</p>
         </div>
         <div class="char-card">
-            <div class="char-icon">🛡️</div>
+            <div class="char-icon"><div class="char-icon-hepatitis"></div></div>
+            <h3>Hepatitis</h3>
+            <span class="char-type type-enemy">Hard</span>
+            <p>You will find it  only in Liver scenario.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-citomegalovirus"></div></div>
+            <h3>Citomegalovirus</h3>
+            <span class="char-type type-enemy">Hard</span>
+            <p>You will find it only in Liver and Heart scenarios.</p>
+        </div>
+    </div>
+
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-hiv"></div></div>
+            <h3>HIV</h3>
+            <span class="char-type type-enemy">Very Hard</span>
+            <p>You will find it  only in Genitals scenario.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-coxsackie"></div></div>
+            <h3>Coxsackie</h3>
+            <span class="char-type type-enemy">VeryHard</span>
+            <p>You will find it  only in Heart scenario.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-poliovirus"></div></div>
+            <h3>Poliovirus</h3>
+            <span class="char-type type-enemy">Super Hard</span>
+            <p>You will find it only in Brain scenario.</p>
+        </div>
+    </div>
+
+    <h2>Supporting</h2>
+    <div class="char-grid">
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-mitochondria"><div class="mito-layer mito-ovale"></div><div class="mito-layer mito-criste"></div><div class="mito-layer mito-faccina"></div></div></div>
+            <h3>Mitochondria</h3>
+            <span class="char-type type-ally">Ally </span>
+            <p></p>They simply float behind each scenarios hoping in your success 
+            and celebrating your victories.</p>
+        </div>
+        <div class="char-card">
+            <div class="char-icon"><div class="char-icon-piastrina"></div></div>
             <h3>Blood platelets</h3>
-            <span class="char-type type-ally">Ally · Tool</span>
-            <p>A temporary wall that absorbs virus hits before breaking down.</p>
+            <span class="char-type type-ally">Ally</span>
+            <p>They appear to celebrate your victories flowing with blood and 
+                let you pass through the stages of the human body.</p>
         </div>
     </div>
 
