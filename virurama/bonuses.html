@@ -60,6 +60,11 @@
             color: #00ffaa;
             background: #00ffaa14;
         }
+        nav.site-nav a.disabled {
+            color: #555;
+            pointer-events: none;
+            cursor: default;
+        }
 
         /* Score table */
         .score-table {
@@ -163,11 +168,11 @@
 <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="instructions.html">Instructions</a>
-    <a href="characters.html">Characters</a>
-    <a href="rescue.html">Rescue</a>
+    <a href="gamecast.html">Game Cast</a>
+    <a href="characters_to_heal.html">Characters to Heal</a>
     <a href="bonuses.html" class="active">Bonuses &amp; Scores</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="trophies.html">Trophies</a>
+    <a href="statistics.html" class="disabled">Statistics</a>
+    <a href="trophies.html" class="disabled">Trophies</a>
 </nav>
 
 <header>
@@ -179,188 +184,176 @@
 <div class="container">
 
     <!-- ── Base scores ── -->
-    <h2>Base Scores</h2>
-    <p class="section-intro">Points awarded for direct actions during a run.</p>
+    <h2>Virus Basic Kill Scores</h2>
     <table class="score-table">
         <thead>
             <tr><th>Action</th><th>Description</th><th>Points</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>Virus destroyed (Antibiotic)</td>
-                <td>Destroy a virus with a direct Antibiotic hit.<span class="note">Scales with virus type.</span></td>
-                <td class="pts">+100</td>
+                <td>Virus destroyed by Bio-Block</td>
+                <td>Crush a virus with a direct Bio-Block hit.
+                    
+                <td class="pts">400</td>
             </tr>
             <tr>
-                <td>Virus destroyed (Bio‑Block combo)</td>
-                <td>Destroy a virus via a Bio‑Block chain reaction.<span class="note">Bonus for each chained virus.</span></td>
-                <td class="pts">+150</td>
+                <td>Virus destroyed by Bio-Block</td>
+                <td>Crush two virus with a direct Bio-Block hit.
+                <td class="pts">1600</td>
             </tr>
             <tr>
-                <td>Chain kill (2nd virus)</td>
-                <td>Second virus destroyed in the same chain.<span class="note">Each additional +50 pts more than previous.</span></td>
-                <td class="pts">+200</td>
+                <td>Virus destroyed by Bio-Block</td>
+                <td>Crush three virus with a direct Bio-Block hit.
+                <td class="pts">3200</td>
             </tr>
             <tr>
-                <td>Chain kill (3rd+ virus)</td>
-                <td>Third and beyond in the same chain.</td>
-                <td class="pts">+250 each</td>
+                <td>Virus destroyed by Bio-Block</td>
+                <td>Crush four virus with a direct Bio-Block hit.
+                <td class="pts">6400</td>
             </tr>
             <tr>
-                <td>Virus destroyed (Barrier crush)</td>
-                <td>A Barrier wall squeezes a virus into a corner.</td>
-                <td class="pts">+120</td>
-            </tr>
-            <tr>
-                <td>Stage cleared</td>
-                <td>All viruses eliminated on the current stage.<span class="note">Base flat bonus before multipliers.</span></td>
-                <td class="pts">+500</td>
+                <td>Virus killed by trample</td>
+                <td>The Antibody can trample on stunned viruses.</td>
+                <td class="pts">100</td>
             </tr>
         </tbody>
     </table>
 
-    <!-- ── Rescue scores ── -->
-    <h2>Rescue Scores</h2>
-    <p class="section-intro">Points earned by keeping cells alive at the end of each stage.</p>
+       <!-- ── Bonus scores ── -->
+    <h2>Bonus Scores in Action</h2>
     <table class="score-table">
         <thead>
-            <tr><th>Cell</th><th>Condition</th><th>Points</th></tr>
+            <tr><th>Action</th><th>Description</th><th>Points</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>Red Blood Cell</td>
-                <td>Alive at end of stage.</td>
-                <td class="pts">+500</td>
+                <td>Big antibiotics alignment award</td>
+                <td>Contact and align the three antibiotics vertically or horizontally 
+                    but only one of them can touch the barrier
+                <td class="pts">10000</td>
             </tr>
             <tr>
-                <td>White Blood Cell</td>
-                <td>Alive at end of stage.</td>
-                <td class="pts">+800</td>
+                <td>Low antibiotics alignment award</td>
+                <td>Contact and align the three antibiotics vertically or horizontally 
+                    all three touching the barrier (easier to achieve than the big one)
+                <td class="pts">5000</td>
             </tr>
             <tr>
-                <td>Stem Cell</td>
-                <td>Alive at end of stage + grants a power‑up.</td>
-                <td class="pts">+1 500</td>
-            </tr>
-            <tr>
-                <td>Platelet</td>
-                <td>All Platelets alive → stage score ×2.</td>
-                <td class="pts">×2 multiplier</td>
-            </tr>
-            <tr>
-                <td>Perfect Rescue</td>
-                <td>Every rescuable cell on a stage is alive.</td>
-                <td class="pts">+2 000 bonus</td>
+                <td>DNA Bonus</td>
+                <td>Pick the DNA fragments that are hidden behind a random Bio-Block.</td>
+                <td class="pts">2000</td>
             </tr>
         </tbody>
     </table>
 
-    <!-- ── DNA Bonuses ── -->
-    <h2>DNA Bonuses</h2>
-    <p class="section-intro">Hidden collectibles scattered across each stage. Collecting them awards points and unlocks score multipliers.</p>
+     <!-- ── scores by block break── -->
+    <h2> Scores for Bio-Block Break</h2>
+    <p>Push a Bio-Block or Antibiotic that cannot move to break it. </p>
     <table class="score-table">
         <thead>
-            <tr><th>DNA Type</th><th>Effect</th><th>Points</th></tr>
+            <tr><th>Action</th><th>Description</th><th>Points</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>🧬 Single Strand</td>
-                <td>Simple point bonus.</td>
-                <td class="pts">+300</td>
+                <td>Empty Bio-Block break</td>
+                <td>Simple Bio-Block. </td>
+                <td class="pts">30</td>
             </tr>
             <tr>
-                <td>🧬 Double Helix</td>
-                <td>Point bonus + brief speed boost for player.</td>
-                <td class="pts">+600</td>
+                <td>Occupied Bio-Block break</td>
+                <td>Blinking Bio-Block with a sleeping virus inside. </td>
+                <td class="pts">200</td>
             </tr>
             <tr>
-                <td>🧬 Mutant Strand</td>
-                <td>Rare. Doubles next Antibiotic blast radius for one use.</td>
-                <td class="pts">+1 000</td>
+                <td>Antibiotic break</td>
+                <td>Don't worry, they can be recalled. </td>
+                <td class="pts">200</td>
             </tr>
             <tr>
-                <td>🧬 Full Genome</td>
-                <td>All 3 DNA types collected on a stage → bonus awarded.</td>
-                <td class="pts">+3 000</td>
+                <td>Used Bio-Block break</td>
+                <td>Bio-Block with number 1  (1 virus killed)</td>
+                <td class="pts">200</td>
+            </tr>
+            <tr>
+                <td>Used Bio-Block break</td>
+                <td>Bio-Block with number 2  (2 virus killed)</td>
+                <td class="pts">400</td>
+            </tr>
+            <tr>
+                <td>Used Bio-Block break</td>
+                <td>Bio-Block with number 3  (3 virus killed)</td>
+                <td class="pts">800</td>
+            </tr>
+            <tr>
+                <td>Used Bio-Block break</td>
+                <td>Bio-Block with number 4  (4 virus killed)</td>
+                <td class="pts">1600</td>
             </tr>
         </tbody>
     </table>
 
-    <!-- ── Multipliers ── -->
-    <h2>Score Multipliers</h2>
-    <p class="section-intro">Multipliers stack and are applied to the total stage score before being added to the run total.</p>
-    <div class="mult-grid">
-        <div class="mult-card">
-            <div class="mult-val">×2</div>
-            <h3>All Platelets Rescued</h3>
-            <p>Rescue every Platelet on the stage.</p>
-        </div>
-        <div class="mult-card">
-            <div class="mult-val">×1.5</div>
-            <h3>No Deaths</h3>
-            <p>Complete a stage without losing any rescuable cell.</p>
-        </div>
-        <div class="mult-card">
-            <div class="mult-val">×1.5</div>
-            <h3>Speed Clear</h3>
-            <p>Clear the stage in under 60 seconds.</p>
-        </div>
-        <div class="mult-card">
-            <div class="mult-val">×2</div>
-            <h3>Full Genome</h3>
-            <p>Collect all DNA types on the stage.</p>
-        </div>
-        <div class="mult-card">
-            <div class="mult-val">×3</div>
-            <h3>Flawless</h3>
-            <p>No cells lost + all DNA collected + speed clear combined.</p>
-        </div>
-        <div class="mult-card">
-            <div class="mult-val">+10%</div>
-            <h3>Per Stage Streak</h3>
-            <p>Each consecutive stage cleared without losing a cell adds 10% to the cumulative multiplier (stacks up to ×3).</p>
-        </div>
-    </div>
-
-    <!-- ── End-of-run bonuses ── -->
-    <h2>End‑of‑Run Bonuses</h2>
-    <p class="section-intro">Awarded once at the end of a complete 16‑stage run.</p>
+         <!-- ── scores by end of stage── -->
+    <h2> Score for stage completion</h2>
+    <p>Be aware of time and complete the stage efficiently. </p>
     <table class="score-table">
         <thead>
-            <tr><th>Bonus</th><th>Condition</th><th>Points</th></tr>
+            <tr><th>Action</th><th>Description</th><th>Points</th></tr>
         </thead>
         <tbody>
             <tr>
-                <td>Survivor</td>
-                <td>Reach stage 16.</td>
-                <td class="pts">+5 000</td>
+                <td>Best time bonus.</td>
+                <td>Complete the stage within 20 seconds.</td>
+                <td class="pts">5000</td>
             </tr>
             <tr>
-                <td>Perfect Run</td>
-                <td>Complete all 16 stages without losing a single cell.</td>
-                <td class="pts">+25 000</td>
+                <td>Time bonus.</td>
+                <td>Complete the stage from 21 to 59 seconds.</td>
+                <td class="pts">2500...100</td>
             </tr>
             <tr>
-                <td>DNA Completionist</td>
-                <td>Collect every DNA bonus in all 16 stages.</td>
-                <td class="pts">+15 000</td>
+                <td>No Time bonus.</td>
+                <td>Complete the stage in 60 seconds or more.</td>
+                <td class="pts">0</td>
             </tr>
-            <tr>
-                <td>No Antibiotic Run</td>
-                <td>Finish the game without deploying any Antibiotic.</td>
-                <td class="pts">+20 000</td>
-            </tr>
-            <tr>
-                <td>Speed Run</td>
-                <td>Complete the full run in under 30 minutes.</td>
-                <td class="pts">+10 000</td>
-            </tr>
+
         </tbody>
     </table>
 
-    <div class="placeholder-notice">
-        ✏️ Values are subject to balance adjustments before and after launch on 19th June 2026.
-    </div>
+        <!-- ── Advanced scores ── -->
+    <h2>Virus Advanced Kill Scores</h2>
+    <p>The Antibiotic bonus activate a special multiplier effect to be applied to each 
+        virus killed during the small stunning period. </p>
+    <table class="score-table">
+        <thead>
+            <tr><th>Action</th><th>Description</th><th>Points</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> 1st Virus crush by Bio-Block</td>
+                <td>Single or multiple virus crush by a Bio-Block hit within stunning period.
+                    
+                <td class="pts">x2</td>
+            </tr>
+            <tr>
+                <td> 2nd Virus crush by Bio-Block</td>
+                <td>Single or multiple virus crush by a Bio-Block hit within stunning period.
+                    
+                <td class="pts">x4</td>
+            </tr>
+            <tr>
+                <td> 3rd Virus crush by Bio-Block</td>
+                <td>Single or multiple virus crush by a Bio-Block hit within stunning period.
+                    
+                <td class="pts">x8</td>
+            </tr>
+            <tr>
+                <td> 4th Virus crush by Bio-Block</td>
+                <td>Single or multiple virus crush by a Bio-Block hit within stunning period.
+                    
+                <td class="pts">x16</td>
+        </tbody>
+    </table>
+
 
 </div>
 
